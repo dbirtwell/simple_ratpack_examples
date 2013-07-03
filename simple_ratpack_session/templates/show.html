@@ -1,0 +1,28 @@
+<html>
+  <body>
+     <p>${model}</p>
+     <p>${model.itemList}</p>	 
+
+<%
+def itemList = model.itemList
+%>
+
+  <table border="1">
+    <tr>
+      <th>ID</th><th>NAME</th><th>TYPE</th><th>PRIMARY LOCATION</th><th>SECONDARY LOCATION</th>
+    </tr>
+	
+<%itemList.each() { %>
+    <tr>
+      <td>${it.id}</td>
+      <td>${it.name}</td>
+      <td>${it.itemType}</td>
+      <td>${it.itemLocation_1}</td>
+      <td>${it.itemLocation_2}</td>
+    </tr>
+<% }%>
+
+</table>
+
+  </body>				  
+</html>
